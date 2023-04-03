@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using static TPMoyennes.Classe;
 
 namespace TPMoyennes
 {
@@ -27,9 +28,9 @@ namespace TPMoyennes
             sixiemeA.ajouterMatiere("Histoire");
             Random random = new Random();
             // Ajout de 5 notes à chaque élève et dans chaque matière
-            for (int ieleve = 0; ieleve < sixiemeA.eleves.Count; ieleve++)
+            for (int ieleve = 0; ieleve < sixiemeA.eleves.Count(); ieleve++)
             {
-                for (int matiere = 0; matiere < sixiemeA.matieres.Count; matiere++)
+                for (int matiere = 0; matiere < sixiemeA.matieres.Count(); matiere++)
                 {
                     for (int i = 0; i < 5; i++)
                     {
@@ -52,6 +53,8 @@ namespace TPMoyennes
             // Afficher la moyenne générale de la classe
             Console.Write("Classe de " + sixiemeA.nomClasse + ", Moyenne Generale : " + sixiemeA.Moyenne() + "\n");
             Console.Read();
+
+
         }
     }
 }
